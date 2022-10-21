@@ -1,0 +1,109 @@
+<!--
+		Author:           rirorakuJavaScript
+		Date Published:   Fri Oct 21 12:33:51 PST 2022
+		Work point:       sabay sa trend
+		Environment:      Web Browser (mobile)
+		Description:      Design w/o JavaScript
+		
+		Note: For entertainment purposes only! DO NOT IMPLEMENT THIS ON
+				  YOUR PROJECT IT IS NOT WORTHWHILE UNLESS YOU KNOW HOW.
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<title>Trend</title>
+		<style>
+			@font-face {
+				font-family: "anti";
+				src: url(res/AntipastoPro.ttf);
+			}
+			html, body {
+				padding: 0;
+				margin: 0;
+				-webkit-user-select: none;
+				   -moz-user-select: none;
+				    -ms-user-select: none;
+				        user-select: none;
+			}
+			body {
+				background: #111;
+			}
+			*, *::before, *::after {
+				font-family: "anti", monospace;
+			}
+			/* contents */
+			.flex {
+				display: flex;
+				display: -webkit-flex;
+				display: -moz-box;
+			}
+			.wrapper {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+			}
+			.wrap {
+				width: inherit;
+				height: 100px;
+				margin: auto;
+			}
+			.wrap.a:first-child {
+				width: 65%;
+				height: 100%;
+			}
+			.wrap.a:last-child {
+				width: 35%;
+				height: 100%;
+			}
+			.wrap.a:first-child *, .wrap.a .h * {
+				margin: auto 0 50px 10px;
+				background: linear-gradient(purple, #1a11ab);
+				color: ghostwhite;
+			}
+			.h {
+				width: 50%;
+				height: 100%;
+				z-index: 2;
+			}
+			input {
+				width: 100%;
+				height: 20px;
+				border-radius: 20px;
+				border: none;
+				padding: 5px 5px 5px 10px;
+				outline: none;
+			}
+			button {
+				width: 50px;
+				height: 20px;
+				border-radius: 20px;
+				padding: 5px;
+				border: 1px outset purple;
+				transition: 0.23s;
+			}
+			
+			/* This is where the magic begins */
+			.h:hover button {
+				transition: 0.23s;
+				transform: translate(65px,0);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrapper flex">
+			<div class="wrap flex">
+				<div class="wrap a flex"><input readonly type="text" value="I love you too..."></div>
+				<div class="wrap a flex">
+					<div class="h flex">
+						<button>Send</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
