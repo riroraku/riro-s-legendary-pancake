@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+			<title>Button Stylish</title>
+			<style>
+				@font-face {
+					font-family: "al";
+					src: url(/res/Montserrat-Light.ttf);
+				}
+				html, body {
+					margin: 0;
+					padding: 0;
+					box-sizing: border-box;
+					font-family: "al", courier;
+					user-select: none;
+					
+					background: white;
+				}
+				.flex {display: flex;}
+				.main {
+					width: 100%;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					color: white;
+				}
+				.button {
+					width: 120px;
+					height: 50px;
+					margin: auto;
+					text-align: center;
+					background: #AEB4FF;
+					border-radius: 20px;
+					box-shadow: 0 0 12px 1px #5964D6;
+					transition: 0.3s ease-out;
+				}
+				.button:hover {
+					transition: 0.5s ease-in;
+					box-shadow: 0 0 10px 3px #fff, 0 0 100px 3px #4856F2;
+					background: #F4F5FF;
+					color: #939CFF;
+				}
+				.button:hover > span {
+					letter-spacing: 10px;
+					transition: 0.5s ease-in;
+					padding-left: 10px;
+					font-size: 12px;
+				}
+				.button > span {
+					margin: auto;
+					font-size: 14px;
+				}
+				.button > span::before {
+					content: '';
+					width: 4px;
+					height: 4px;
+					border-radius: 100%;
+					z-index: 0;
+					position: absolute;
+					margin-top: 5px;
+					margin-left: 20px;
+					animation: 1.67s b ease-in infinite;
+				}
+				.button > span::after {
+					content: '';
+					width: 1px;
+					height: 1px;
+					background: none;
+					border-radius: 100%;
+					border: 1px solid red;
+					z-index: -1;
+					position: absolute;
+					margin-top: 5px;
+					margin-left: -20px;
+					animation: 2.5s b ease-in infinite;
+					animation-delay: .34s;
+					transform: rotate(160deg);
+				}
+				.button:hover > span::before {animation: 1.67s b2 ease-in infinite;}
+				.button:hover > span::after {animation: 1.7s b ease-in infinite;}
+				@keyframes b {
+					0% {box-shadow: initial;}
+					80% {opacity: 1;}
+					100% {
+						box-shadow: 3px -65px 1px #A7AEFF,
+												6px 60px 0 #A7AEFF,
+												120px 55px 2px #A7AEFF,
+												90px -40px 0 #A7AEFF,
+												-100px 60px 2px 2px #A7AEFF,
+												120px -100px 1px #A7AEFF,
+												-140px -100px 0 #A7AEFF,
+												0 140px 0 #A7AEFF
+												;
+						opacity: 0;
+					}
+				}
+				@keyframes b2 {
+					0% {box-shadow: initial;}
+					80% {opacity: 1;}
+					100% {
+						box-shadow: 3px -65px 1px #fff,
+												6px 60px 0 #fff,
+												120px 55px 2px #fff,
+												90px -40px 0 #fff,
+												-100px 60px 2px 2px #fff,
+												120px -100px 1px #fff,
+												-140px -100px 0 #fff,
+												0 140px 0 #fff
+												;
+						opacity: 0;
+					}
+				}
+			</style>
+		</head>
+		<body>
+			<div class="main flex">
+				<div class="button flex">
+					<span>Button</span>
+				</div>
+			</div>
+		</body>
+	</html>
